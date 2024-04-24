@@ -9,3 +9,7 @@ let passWord = "sayan1234";
     let name = "Sayan Chatterjee";
  }
  //console.log(name); -- This throws an error , since let is block scoped.
+
+ const id = 12;
+ //id =10; --> const variables cannot be reassigned.
+ console.log(id);
