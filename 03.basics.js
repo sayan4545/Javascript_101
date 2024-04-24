@@ -13,3 +13,8 @@ let passWord = "sayan1234";
  const id = 12;
  //id =10; --> const variables cannot be reassigned.
  console.log(id);
+let name = "Sayan";
+console.log(name[0])
+//Strings 
+
+
