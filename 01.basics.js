@@ -1,6 +1,6 @@
 /*
 
-it is a multi purpose and multi paradigm programming language.
+>it is a multi purpose and multi paradigm programming language.
 
 >console.log()--> in JS--> console is a  js object that has log function.
 
@@ -59,8 +59,17 @@ the values initaialized by const cant be updated.
 keywords are special words that holds speciual meaning to the language. They are already reserved.
 
 > Operators
---1) Arithmatic operators -(+,-,*,/,%)
 
+--1) Arithmatic operators -(+,-,*,/,%)
+--2) Assignment operators -(=,+=,)
+-- x +=2 ; --> First add 2 to the value of x , and then assign it to x;
+
+--3) Logical operators
+
+-- logical OR operator - || 
+-- logical AND operator - &&
+-- logical NOT operator - !
+For logical operators the operands are evaluated to booleans and then operators are applied.
 
 */
 
@@ -121,3 +130,22 @@ console.log(4*2);
 console.log(7-2);
 console.log(4/2);
 console.log(4%3);
+
+let b = 2;
+b+=2;
+console.log(b);
+
+// division operator
+
+console.log(5/2); 
+console.log(Math.floor(5/2));//Gives the quotient.
+console.log(parseInt(5/2)); // It also gives the quotient.
+
+// console.log(10>5 && 3<2);
+// console.log(10>5 || 7<6);
+console.log(4 && 0);
+console.log(4||0);
+console.log(0 && 4);
+console.log(0||4);
+
+
