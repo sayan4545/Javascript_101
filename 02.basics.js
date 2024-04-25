@@ -41,7 +41,13 @@ These o[perators dont directly operate on numbers but instead operate on binary 
      convert the left operand to its binary version . =10
      add no of zeroes to the right of the binary value same as the left operand.
      so the binary value of the result becomes , 100
-     final result is 
+     final result is  4.
+
+     1<<1 ->2
+     2<<1 ->4
+
+     5>>1 -> The last bit will be lost
+
 
 
 
@@ -57,3 +63,5 @@ console.log("Sayan "+"Chatterjee");
 console.log(5&3);
 console.log(5|4);
 console.log(2<<1);
+
+console.log(0-(-0));
