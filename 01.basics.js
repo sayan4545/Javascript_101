@@ -23,8 +23,15 @@ When we print Hello JS , we are printing strings . Can be defined by single quot
 >We dontb have a character data type in String. 'a' and "a" are both string in js.
 
 > boolean --> true or false 
+>In objects we store key value pairs.
 
+>Symbol --> console.log(Symbol("Hello")); Immutable data type.
+> In JS we have both 0 and -0. Both are different .console.log(0) -->0 and console.log(-0) --> -0.
 
+> OPERATORS IN JS -- 1)typeof -->  It will show the type of the corresponding value. 
+console.log(typeof <value>) --> The answer we get is in the form of a string.
+console.log(typeof 12);--> Number
+console.log(typeof "Sayan")--> String
 
 
 */
@@ -54,8 +61,15 @@ console.log(null);
 //Object
 console.log({"Sayan":12});
 
+//Symbol
+console.log(Symbol("Hello"));
 
+//typeof operator
 
+console.log(typeof 12);
+console.log(typeof "Sayan Chatterjee");
+let a = console.log(typeof 12);
+console.log(typeof a);
 
 
 
