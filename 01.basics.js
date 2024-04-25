@@ -33,6 +33,34 @@ console.log(typeof <value>) --> The answer we get is in the form of a string.
 console.log(typeof 12);--> Number
 console.log(typeof "Sayan")--> String
 
+> typeof undefined = undefined
+typeof null --> Object
+
+>Difference between program and process 
+
+--If we write a code in a file that is a program. While program in a running state is called a process.
+or program under executionj is process.
+
+--When a program gets transformed into process , a lot of thing happens. We load all the pieces of code into the RAM 
+Once the process is running, inside our ram we get the memory allocated for our process.We need a mechanism to store the values.
+we do it using the variables. Variuables are the buckets in the memory , whicvh store the values. The bucket will have a name or 
+a label. It will store some value. The overall bucket is called variable.
+
+> How do you initialise variables in JS?
+-- There are 3 ways to be precise 
+
+1) let--> let <variable name> = value;
+
+2)var --> var <variable name> = value;
+
+3) const --> const <variable name> = value;
+the values initaialized by const cant be updated.
+
+keywords are special words that holds speciual meaning to the language. They are already reserved.
+
+> Operators
+--1) Arithmatic operators -(+,-,*,/,%)
+
 
 */
 
@@ -70,6 +98,26 @@ console.log(typeof 12);
 console.log(typeof "Sayan Chatterjee");
 let a = console.log(typeof 12);
 console.log(typeof a);
+console.log(typeof Symbol("Hello"));
+console.log(typeof NaN);
+console.log("a","b",12,56);
 
+//To print in the same line
 
+process.stdout.write("Hello "); //This will only with node.
+process.stdout.write("World"); //This will not work with the browser
+console.log();
+console.log("-----------------------")
+let x  =10;
+var y =20;
+const z = "sa";
+console.log(x,y,z);
 
+console.log(typeof (typeof (12)));// The output is string 
+
+//Operators
+console.log(5+2);
+console.log(4*2);
+console.log(7-2);
+console.log(4/2);
+console.log(4%3);
