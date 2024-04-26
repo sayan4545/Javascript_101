@@ -105,7 +105,8 @@ for(let i=0;i<10;i++){
 }
 
 >> break keyword  --> whenever we hit the break, we come out of the nearest loop
->> switch keyword -->
+>> continue keyword --> when we hit continue, we again move to the nearest loop for
+                        execution.
 
 */
 
@@ -159,12 +160,24 @@ let name = "Sayan";
 //     console.log(i);
 // }
 
-console.log();
+// console.log();
+// for(let i=0;i<5;i++){
+//     let str = "";
+//     for(let j=0; true;j++){
+//         str = str +"*";
+//         if(j==i){
+//             break;
+//         }
+//     }
+//     console.log(str);
+// }
+console.log()
+
 for(let i=0;i<5;i++){
     let str = "";
-    for(let j=0; true;j++){
+    for(let j=0;true;j++){
         str = str +"*";
-        if(j==i){
+        if(j==4-i){
             break;
         }
     }
