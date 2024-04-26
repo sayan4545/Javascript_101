@@ -54,6 +54,44 @@ These o[perators dont directly operate on numbers but instead operate on binary 
      idf the condition is true, the expression 1 is evaluated and if the condition is false , 
      the expression 2 is evaluated.
 
+--- >> Statements and expression
+
+let a = 10; One complete executable piece of code is a statement.
+b = 1 +(x+2);
+The whole is a statement , but the x+2 inside the bracket is a expression.
+In a Statement there can be multiple expressions.
+
+>> Conditionals
+
+condition --> either decision 1 or decision 2.
+
+if, else , if- else
+
+if(condition){
+    
+}else{
+
+
+}
+The space inside the curly braces is called block. If the condition holds true, the code inside the 
+block gets executed.
+
+If the condition is true the else block is completely avoided. If the condition is false, the if block is completely avoided.
+
+--- for multiple decision
+
+if(condition1){
+
+}else if(condition2){
+
+}else if(condition3){
+
+}else{
+
+}
+
+
+
 
 
 
@@ -74,3 +112,19 @@ console.log(2<<1);
 console.log(0-(-0));
 
 console.log((2>1)?("Sayan"):("Chatterjee"));
+
+
+// Conditionals
+if(10>2){
+    console.log("Hey");
+}else{
+    console.log("Hi");
+}
+
+if (2>3){
+    console.log("2 is greater than 3");
+}else if(3<2){
+    console.log("3 is less than 2");
+}else{
+    console.log("Hey ")
+}
