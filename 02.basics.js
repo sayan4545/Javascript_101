@@ -40,13 +40,21 @@ These o[perators dont directly operate on numbers but instead operate on binary 
      2<<1 ?
      convert the left operand to its binary version . =10
      add no of zeroes to the right of the binary value same as the left operand.
-     so the binary value of the result becomes , 100
+     so the binary value of the result becomes  100
      final result is  4.
 
      1<<1 ->2
      2<<1 ->4
 
      5>>1 -> The last bit will be lost
+
+     >--4) Ternary Operator
+
+     --(condition)?(expression 1):(expression 2)
+     idf the condition is true, the expression 1 is evaluated and if the condition is false , 
+     the expression 2 is evaluated.
+
+
 
 
 
@@ -63,5 +71,6 @@ console.log("Sayan "+"Chatterjee");
 console.log(5&3);
 console.log(5|4);
 console.log(2<<1);
-
 console.log(0-(-0));
+
+console.log((2>1)?("Sayan"):("Chatterjee"));
