@@ -16,7 +16,8 @@
 --  + -> Concatenate two strings and return only one. "abc"+"Sayan" -> abcSayan
 
 --5) Bitwise operators 
-These o[perators dont directly operate on numbers but instead operate on binary representaion of number.
+
+    These operators dont directly operate on numbers but instead operate on binary representaion of number.
     -- Bitwise and ->        &
     --Bitwise Or ->          |
     --Bitwise Xor ->            ^
@@ -90,13 +91,21 @@ if(condition1){
 
 }
 
+any comparison operator can be used in the conditions.
 
+>> Loops
+let i =0;
+while(i<10){
+    console.log(i);
+    i = i+1;
+}
 
+for(let i=0;i<10;i++){
+    console.log(i);
+}
 
-
-
-
-
+>> break keyword  --> whenever we hit the break, we come out of the nearest loop
+>> switch keyword -->
 
 */
 
@@ -115,16 +124,49 @@ console.log((2>1)?("Sayan"):("Chatterjee"));
 
 
 // Conditionals
-if(10>2){
-    console.log("Hey");
-}else{
-    console.log("Hi");
-}
+// if(10>2){
+//     console.log("Hey");
+// }else{
+//     console.log("Hi");
+// }
 
-if (2>3){
-    console.log("2 is greater than 3");
-}else if(3<2){
-    console.log("3 is less than 2");
-}else{
-    console.log("Hey ")
+// if (2>3){
+//     console.log("2 is greater than 3");
+// }else if(3<2){
+//     console.log("3 is less than 2");
+// }else{
+//     console.log("Hey ")
+// }
+
+//while loop
+
+let name = "Sayan";
+// let i =0;
+// while(i<5){
+//     console.log(name);
+//     i = i+1;//updation 
+// }
+
+// for(let i=0;i<5;i++){
+//     console.log(name);
+// }
+
+// for(let i=1;i<10;i++){
+//     if(i%7===0){
+//         console.log("breaking now");
+//         break;
+//     }
+//     console.log(i);
+// }
+
+console.log();
+for(let i=0;i<5;i++){
+    let str = "";
+    for(let j=0; true;j++){
+        str = str +"*";
+        if(j==i){
+            break;
+        }
+    }
+    console.log(str);
 }
