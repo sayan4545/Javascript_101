@@ -171,15 +171,25 @@ let name = "Sayan";
 //     }
 //     console.log(str);
 // }
+
+
 console.log()
 
+// for(let i=0;i<5;i++){
+//     let str = "";
+//     for(let j=0;true;j++){
+//         str = str +"*";
+//         if(j==4-i){
+//             break;
+//         }
+//     }
+//     console.log(str);
+// }
+// square
 for(let i=0;i<5;i++){
     let str = "";
-    for(let j=0;true;j++){
-        str = str +"*";
-        if(j==4-i){
-            break;
-        }
+    for(let j=0;j<5;j++){
+        str = str+"* ";
     }
     console.log(str);
 }
