@@ -110,18 +110,18 @@ for(let i=0;i<10;i++){
 
 */
 
-console.log(4>3);
-console.log(4>=3);
-console.log(4==4);
-console.log(4===4);
+// console.log(4>3);
+// console.log(4>=3);
+// console.log(4==4);
+// console.log(4===4);
 
-console.log("Sayan "+"Chatterjee");
-console.log(5&3);
-console.log(5|4);
-console.log(2<<1);
-console.log(0-(-0));
+// console.log("Sayan "+"Chatterjee");
+// console.log(5&3);
+// console.log(5|4);
+// console.log(2<<1);
+// console.log(0-(-0));
 
-console.log((2>1)?("Sayan"):("Chatterjee"));
+// console.log((2>1)?("Sayan"):("Chatterjee"));
 
 
 // Conditionals
@@ -175,16 +175,20 @@ let name = "Sayan";
 
 console.log()
 
-// for(let i=0;i<5;i++){
-//     let str = "";
-//     for(let j=0;true;j++){
-//         str = str +"*";
-//         if(j==4-i){
-//             break;
-//         }
-//     }
-//     console.log(str);
-// }
+for(let i=0;i<5;i++){
+    let str = "";
+    for(let j=0;true;j++){
+        str = str +"* ";
+        if(j==4-i){
+            break;
+        }
+    }
+    console.log(str);
+}
+
+console.log();
+
+
 // square
 for(let i=0;i<5;i++){
     let str = "";
