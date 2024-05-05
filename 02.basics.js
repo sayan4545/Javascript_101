@@ -109,7 +109,7 @@ for(let i=0;i<10;i++){
                         execution.
 
 */
-
+/*
 // console.log(4>3);
 // console.log(4>=3);
 // console.log(4==4);
@@ -171,7 +171,7 @@ let name = "Sayan";
 //     }
 //     console.log(str);
 // }
-
+*/
 
 console.log()
 
@@ -189,11 +189,22 @@ for(let i=0;i<5;i++){
 console.log();
 
 
-// square
 for(let i=0;i<5;i++){
     let str = "";
     for(let j=0;j<5;j++){
         str = str+"* ";
+    }
+    console.log(str);
+}
+let n = 5;
+for(let row =0;row <n;row++){
+    let str = "";
+    for(let col=0;col<n-row;col++){
+        str = str +" ";
+    }
+    console.log(str);
+    for(let col=0;col<row+1;col++){
+        str = str +"* ";
     }
     console.log(str);
 }
