@@ -173,38 +173,70 @@ let name = "Sayan";
 // }
 */
 
-console.log()
+// console.log()
 
-for(let i=0;i<5;i++){
+// for(let i=0;i<5;i++){
+//     let str = "";
+//     for(let j=0;true;j++){
+//         str = str +"* ";
+//         if(j==4-i){
+//             break;
+//         }
+//     }
+//     console.log(str);
+// }
+
+// console.log();
+
+
+// for(let i=0;i<5;i++){
+//     let str = "";
+//     for(let j=0;j<5;j++){
+//         str = str+"* ";
+//     }
+//     console.log(str);
+// }
+
+//half pyramid pattern
+
+// let n = 5;
+// for(let row =0;row <n;row++){
+//     let str = "";
+//     for(let col=0;col<n-row;col++){
+//         str = str +" ";
+//     }
+//     console.log(str);
+//     for(let col=0;col<row+1;col++){
+//         str = str +"* ";
+//     }
+//     console.log(str);
+// }
+function printHollowRectangle(rows, columns) {
+    for (let i = 0; i < rows; i++) {
+        let row = '';
+        for (let j = 0; j < columns; j++) {
+            if (i === 0 || i === rows - 1 || j === 0 || j === columns - 1) {
+                row += '*'; // Print '*' for border
+            } else {
+                row += ' '; // Print space for inside of rectangle
+            }
+        }
+        console.log(row);
+    }
+}
+
+for(let row =0;row<8;row++){
     let str = "";
-    for(let j=0;true;j++){
-        str = str +"* ";
-        if(j==4-i){
-            break;
+    for(let col =0;col<8;col++){
+        if(row==0||row ==7||col==0||col==7){
+            str = str +"*";
+        }else{
+            str = str +" ";
         }
     }
     console.log(str);
 }
 
-console.log();
+// Example usage:
+printHollowRectangle(5, 10); // Change the parameters to adjust the size of the rectangle
 
-
-for(let i=0;i<5;i++){
-    let str = "";
-    for(let j=0;j<5;j++){
-        str = str+"* ";
-    }
-    console.log(str);
-}
-let n = 5;
-for(let row =0;row <n;row++){
-    let str = "";
-    for(let col=0;col<n-row;col++){
-        str = str +" ";
-    }
-    console.log(str);
-    for(let col=0;col<row+1;col++){
-        str = str +"* ";
-    }
-    console.log(str);
-}
