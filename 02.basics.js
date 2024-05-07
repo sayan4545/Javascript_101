@@ -239,4 +239,84 @@ for(let row =0;row<8;row++){
 
 // Example usage:
 printHollowRectangle(5, 10); // Change the parameters to adjust the size of the rectangle
+//continue
+for(let i=0;i<10;i++){
+    if(i%3===0){
+        continue;
+    }
+    console.log(i);
+}
+
+//switch case
+let exp ="-";
+let a = 10;
+let b =3;
+switch(exp){
+    case "+":
+        console.log(a+b);
+        break;
+    case "-":
+        console.log(a-b);
+        break;
+    case "*":
+        console.log(a*b);
+        break;
+    case "/":
+        console.log(a/b);
+        break;
+    default:
+        console.log("Invalid input");
+        break;
+}
+
+let val =10;
+switch(val){
+    case 10:
+        console.log("yes");
+        break;
+    default:
+        console.log("no");
+        break;
+}
+// When there are lot of conditions , use switch case than if-else.
+
+/*
+functions
+
+To use a reusable piece of code
+
+function <name> (args){
+
+
+    return value;// not mandatory. if we dont write return , it will automatically return undefined.
+//
+//
+}
+
+return keyword returns an output out of the function and immediately stops executing.
+
+function expression ? fat arrow function
+
+*/
+function fun(x){
+    console.log(x+10);
+    return x*10;
+}
+
+let x = fun(10);
+console.log(x);
+fun(10);
+
+function print(x){
+    x = x+10;
+    return x;
+}
+let y = print(10);
+console.log(y);
+console.log(typeof (console.log(10)));// typeof console.log is undefined
+
+let z =10;
+let c = x++;
+let m = x++;
+console.log(z,c,m);
 
