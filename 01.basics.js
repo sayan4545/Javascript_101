@@ -71,6 +71,8 @@ keywords are special words that holds speciual meaning to the language. They are
 -- logical NOT operator - !
 For logical operators the operands are evaluated to booleans and then operators are applied.
 
+
+
 */
 
 console.log("Hello JS");
@@ -143,9 +145,17 @@ console.log(parseInt(5/2)); // It also gives the quotient.
 
 // console.log(10>5 && 3<2);
 // console.log(10>5 || 7<6);
-console.log(4 && 0);
-console.log(4||0);
-console.log(0 && 4);
-console.log(0||4);
+
+console.log(4 && 0); //-->0
+console.log(4||0); //-->4
+console.log(0 && 4);//-->0
+console.log(0||4);//-->4
+
+
+/*
+ 0 is considered as false value. 4 is true value. so 4 && 0 gives false or 0.
+ in case of OR if the first value is false, whatever is the second value , that is returned. in case 
+ the first value is true, the first value is returned
+*/
 
 
