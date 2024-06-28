@@ -141,17 +141,29 @@ function, it starts maintaining scopes of that function.
 // //x = 90;
 // console.log(x);
 
+//var teacher = "Sayan";
+// function fun(){
+//     var teacher = "Chandrika";
+//     teachingAssistant = "Vaibhav";
+//     console.log(teacher);
+//     console.log(teachingAssistant);
+// }
+// fun();
+// console.log(teacher);
+// console.log(teachingAssistant);
 var teacher = "Sayan";
 function fun(){
+    console.log(subject);
+    var subject = "Javascript";
     var teacher = "Chandrika";
     teachingAssistant = "Vaibhav";
     console.log(teacher);
     console.log(teachingAssistant);
 }
- //Chandrika , Vaibhav, Sayan , 
 fun();
 console.log(teacher);
 console.log(teachingAssistant);
+
 
 
 
@@ -193,6 +205,7 @@ Since it was not formally declared, there can be two cases:
         in front or before fun(), it will throw an error, since auitoglobals acts only in execution.
 
 So teachingAssistant will get a global scope.
+
 
 */
 
