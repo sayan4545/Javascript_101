@@ -156,7 +156,7 @@ function fun(){
     console.log(subject);
     var subject = "Javascript";
     var teacher = "Chandrika";
-    teachingAssistant = "Vaibhav";
+    teachingAssistant = "Vaibhav";//not a formal declaration
     console.log(teacher);
     console.log(teachingAssistant);
 }
