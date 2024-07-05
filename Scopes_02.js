@@ -14,21 +14,42 @@
 
     Second phase: Execution
     Line 1: Assign value Sayan to techer in global scope
+
+    **undefined is a variable state when the scopes already know about it , but in the execution phase we have not 
+    allocated it a value.
+
+    **undeclared is a variable state when we never formnally declare a variable andbefore assigning it a value  so that it
+    has chance to become autoglobal, we try to use it
+
     
 */
-var teacher = "Sayan";
-function fun(){
-    var tecaher = "Chandrika";
-    teachingAssistant = "Vaibhab";//Eligible to become autoglobal.
-    console.log(tecaher);
-    console.log(teachingAssistant);
-}
+// var teacher = "Sayan";
+// function fun(){
+//     var tecaher = "Chandrika";
+//     teachingAssistant = "Vaibhab";//Eligible to become autoglobal.
+//     console.log(tecaher);
+//     console.log(teachingAssistant);
+// }
+// function gun(){
+//     console.log(subject);
+//     var subject = "Java";
+//     console.log(teacher);
+// }
+// console.log(teacher);
+// fun();
+// gun();
+
+// function fun(){
+//     teachingAssistant = "Sayan";
+//     console.log(teachingAssistant);
+//     var teachingAssistant = "Javascript";
+// }
+// // fun();
+
+var fun = 18;
 function gun(){
-    console.log(subject);
-    var subject = "Java";
-    console.log(teacher);
+    console.log("Hello World");
 }
-console.log(teacher);
-fun();
 gun();
+//fun(); --> Type Error
 
