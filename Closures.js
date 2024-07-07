@@ -121,15 +121,40 @@
     lexical scope.
 */
 
-function todo(task){
-    setTimeout(function fun(){
-        console.log("Completed",task);
-    },2000)
+// function todo(task){
+//     console.log("Start");
+//     setTimeout(function fun(){
+//         console.log("Completed",task);
+//     },2000)
+//     console.log("End");
+// }
+
+// console.log("Starting");
+// todo("assignment"); // calling todo
+// console.log("Ending");
+
+// function todo(task){
+//     console.log("Starting todo"); //2
+//     setTimeout(function fun(){
+//         console.log("completed",task);
+//     },0);
+//     task = "Sayan";
+//     console.log("End of todo"); // 3
+// }
+// console.log("Starting");// 1
+// todo("assignments");  // completed sayan
+// console.log("Ending"); // 4
+
+
+function a(name){
+    return function b(){
+        console.log(name);
+    }
 }
 
-console.log("Starting");
-todo("assignment"); // calling todo
-console.log("Ending");
+let x = a("Sayan");
+console.log(x);
+x();
 
 
 
