@@ -98,7 +98,31 @@
 //     }
 // },2000);
 
-setTimeout(() => {console.log("Hey!");
+// setTimeout(() => {console.log("Hey!");
     
-}, 56);
+// }, 56);
 
+// let id1 = setTimeout(()=>
+// console.log("Task completed 1"),10000);
+// let id2 = setTimeout(()=>console.log("Task completed 2"),5000,clearTimeout(id1));
+// let id1 = setInterval(() => {
+//     console.log("Task completed")
+// }, 3000);
+
+// let id2 = setTimeout(()=>{
+//     clearInterval(id1)
+// },10000);
+/*Closure
+
+
+*/
+
+function todo(task){
+    setTimeout(function fun(){
+        console.log("Completed",task);
+    },2000)
+}
+
+console.log("Starting");
+todo("assignment");
+console.log("Ending");
