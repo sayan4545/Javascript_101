@@ -112,9 +112,13 @@
 // let id2 = setTimeout(()=>{
 //     clearInterval(id1)
 // },10000);
+
 /*Closure
-
-
+    At the time instance when the function fun will be called that is a call back function, the todo function is already over
+    if fun() is called after the completion of todo and todo has ended, how fun() is able to access task variable?
+    This happens due to closures.
+    Closure is when a function remembers its lexical scope even when the function is exceuted outside that of the 
+    lexical scope.
 */
 
 function todo(task){
@@ -124,5 +128,8 @@ function todo(task){
 }
 
 console.log("Starting");
-todo("assignment");
+todo("assignment"); // calling todo
 console.log("Ending");
+
+
+
