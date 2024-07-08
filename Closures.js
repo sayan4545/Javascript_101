@@ -156,38 +156,81 @@
 // console.log(x);
 // x();
 
-// function a(name){
-//     return function b(){
-//         return function c(){
-//             setTimeout(()=>{
-//                 console.log(name);
-//             },2000)
-//         }
-//     }
-// }
+
 
 // let x = a("Sayan");
 // console.log(x);
 // x();
 
 
-function fun(){
-    let name = "Sayan";
-    function callback(params){
-        console.log(college);
-        console.log(name);
+// function fun(){
+//     let name = "Sayan";
+//     function callback(params){
+//         console.log(college);
+//         console.log(name);
+//     }
+
+//     return callback;
+// }
+// let x = fun();
+// x();
+// var college = "AOT";
+// x();
+
+/*
+    Untill or unless we execute the function , the function remembers all its scopes.
+    If todo is completed it will be rempved from the callstack, how actually the variables still persist??
+    where are they?
+
+    whenever we see that there are functions that are going to be removed fronm the call stack and 
+    there are variables that are still attached to these functionsthat are yet to be executed, those variables persist.
+    js manages a seoarate closure execution context and maintains all these variables not the values.
+
+    
+*/
+// function fun(task1, task2){
+//     task1 = "Chandrika";
+//     setTimeout(()=>{
+//         console.log("completed",task1);
+//     },2000)
+//     task1 = task2;
+//     task2 = "Rina Dey";
+// }
+// fun("34","45");
+/*
+        task1 and task2 has the scope of fun().
+        task1 = "34";
+        task2 = "45";
+        task1 = "Chandrika";
+        task1 = "45";
+        task2 = "Rina Dey";
+        after 2secs --> log--> completed 45
+*/
+
+// function test(){
+//     for(var i=0;i<3;i++){
+//         let j=i;
+//         setTimeout(function exec(){
+//             console.log(`j: ${j}`);
+//         },j*1000);
+//     }
+// }
+// test();
+const add = (function(){
+    let counter = 0;
+    return function(){
+        counter = counter +1;
+        console.log(counter);
+        return counter;
     }
+    
+})();
 
-    return callback;
-}
+add();
+add();
+add();
 
 
-
-
-let x = fun();
-x();
-var college = "AOT";
-x();
 
 
 
