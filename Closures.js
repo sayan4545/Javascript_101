@@ -146,15 +146,49 @@
 // console.log("Ending"); // 4
 
 
-function a(name){
-    return function b(){
+// function a(name){
+//     return function b(){
+//         console.log(name);
+//     }
+// }
+
+// let x = a("Sayan");
+// console.log(x);
+// x();
+
+// function a(name){
+//     return function b(){
+//         return function c(){
+//             setTimeout(()=>{
+//                 console.log(name);
+//             },2000)
+//         }
+//     }
+// }
+
+// let x = a("Sayan");
+// console.log(x);
+// x();
+
+
+function fun(){
+    let name = "Sayan";
+    function callback(params){
+        console.log(college);
         console.log(name);
     }
+
+    return callback;
 }
 
-let x = a("Sayan");
-console.log(x);
+
+
+
+let x = fun();
 x();
+var college = "AOT";
+x();
+
 
 
 
