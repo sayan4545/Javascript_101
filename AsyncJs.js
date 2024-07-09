@@ -37,6 +37,29 @@
     Now we know runtime also provides functionalities that can be leveraged by JS.
     But how JS handles them??
 
+    For the below snippet of code-->
+
+    1) We can usually do task that take a lot of time to complete without blocking the code flow. How?
+        Whenever we run a jS program , we get a call stack , heap memory. Apart from the call stack we get two more 
+        things , known as event queue and event loop.
+
+        In kine number three, the setTimeIOyt() is the browser/node based feature.JS will take this call to the run time.
+        Hey run time , i have a function that is known to you, please execute . And immediaytely move ahead.
+
+        JS will now be at lone number 6. At the same time the timer will be started. The timer is for 3 seconds.
+        Its a for loop . for loop is a known feature of js, it will keep on executing it. Lets say the whole for loop takes 
+        8 secs to execute. The timer is done for only 3 secs. 
+        for 5 secs , js will keep on executing its own native code. The runtime will pass the call back exec to the EVENT QUEUE
+        The call back is going to wait inside the event queue.
+
+        When will it will be executed?
+        We have an event loop for that, it is like an infibnite loop. It again and again checks for an condition. 
+        the minet it finds the condition true, it pops up the call back or the event.
+
+         The condition to start executing task from the event queue is that the call stack should be empty. 
+         That is no function in the calls stack is left to be excuted.
+         The second condition is that the globval code is also done.
+
     
 
 */
