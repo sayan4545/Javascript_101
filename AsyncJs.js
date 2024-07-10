@@ -53,26 +53,55 @@
         The call back is going to wait inside the event queue.
 
         When will it will be executed?
-        We have an event loop for that, it is like an infibnite loop. It again and again checks for an condition. 
+        We have an event loop for that, it is like an infinite loop. It again and again checks for an condition. 
         the minet it finds the condition true, it pops up the call back or the event.
 
-         The condition to start executing task from the event queue is that the call stack should be empty. 
-         That is no function in the calls stack is left to be excuted.
-         The second condition is that the globval code is also done.
+        The condition to start executing task from the event queue is that the call stack should be empty. 
+        That is no function in the calls stack is left to be excuted.
+        The second condition is that the global code is also done.
+
+        HW-->
+            What happens with console.log()?
+
+
+
 
     
 
 */
 
-function process(){
-    console.log("Start");
-    setTimeout(function exec(){
-        console.log("Exectued some task");
-    },3000);
-    for(let i=0;i<10000000;i++){
+// function process(){
+//     console.log("Start");
+//     setTimeout(function exec(){
+//         console.log("Exectued some task");
+//     },3000);
+//     setTimeout(function exec2(){
+//         console.log("Executed some task 2");
+//     },2000);
+//     for(let i=0;i<10000000;i++){
 
+//     }
+//     console.log("End");
+// }
+
+// process();
+
+// for(var i=0;i<4;i++){
+//     setTimeout(function (){
+//         console.log("*",i);
+//     },i*1000);
+// }
+
+function a(){
+    for(let i =0;i<4;i++){
+        setTimeout(function exec(){
+            console.log("Hi",i);
+        },i*1000);
+        console.log("Inside first setTimeout");
     }
-    console.log("End");
 }
-
-process();
+a();
+console.log("Hey Chandrika");
+setTimeout(()=>{
+    console.log("Hey Sayan!");
+},3000);

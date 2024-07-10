@@ -59,21 +59,21 @@
 // console.log(x);
 // console.log(arr);
 
-// function mapper(arr,fn){
-//     let result = [];
-//     for(let i=0;i<arr.length;i++){
-//         let res = fn(arr[i],i);
-//         result.push(res);
-//     }
-//     return result;
-// }
+function mapper(arr,fn){
+    let result = [];
+    for(let i=0;i<arr.length;i++){
+        let res = fn(arr[i],i);
+        result.push(res);
+    }
+    return result;
+}
 
-// let arr = [1,2,3,4];
-// let x = mapper(arr,function cuber(v,i){
-//     console.log(v,v*v*v,i);
-//     return v*v*v;
-// })
-// console.log(x);
+let arr = [1,2,3,4];
+let x = mapper(arr,function cuber(v,i){
+    console.log(v,v*v*v,i);
+    return v*v*v;
+})
+console.log(x);
 // function fun(x,fn){
 //     for(let i =0;i<x;i++){
 //         console.log(i+" ");
