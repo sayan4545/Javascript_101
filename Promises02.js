@@ -38,16 +38,103 @@
 
 */
 
-function fetch(url){
-    return new Promise(function(resolve,reject){
-        console.log("Starting fetching from the url",url);
-        setTimeout(function process(){
-            let data = "dummy data";
-            console.log("Completed fetching data");
-            resolve(data);// return some data on success
+// function fetch(url){
+//     return new Promise(function(resolve,reject){
+//         console.log("Starting fetching from the url",url);
+//         setTimeout(function process(){
+//             let data = "dummy data";
+//             console.log("Completed fetching data");
+//             resolve(data);// return some data on success
 
-        },4000)
+//         },4000)
 
+//     })
+// }
+// // 1:04
+// function fetch1(url){
+//     return new Promise(function(resolve,reject){
+//         console.log("Starting to download");
+//         for(let i=0;i<1000000000;i++){
+//             // some logic
+//         }
+//         console.log("Completed download");
+//         resolve("data");
+//     })
+// }
+
+// fetch1("www.google.com");
+// console.log(Promise);
+
+// function demo1(){
+//     return new Promise(function (resolve,reject){
+//         console.log("Hi");
+//         setTimeout(function(){
+//             console.log("Task done");
+//             resolve("Students are the best");
+
+//         },5000);
+//         console.log("Bye");
+//     })
+// }
+// let y = demo1();
+// y;
+
+/*
+When do we consider a promise is fulfilled??
+     If we call resolve function we consider it fulfilled.
+     We consider it rejected if we call reject().
+*/
+
+function demo2(val){
+    return new Promise((resolve, reject) => {
+        console.log("Start");
+        setTimeout(() => {
+            console.log("Completed timer");
+            if(val%2==0){
+                // even number
+                resolve("Even");
+            }
+            else{
+                reject("Odd");
+            }
+        }, 3000);
+
+        console.log("Somewhere");
     })
 }
-// 1:04
+
+//let x = demo2(24);
+function demo2(val){
+    return new Promise(function(resolve,reject){
+        console.log("Starting..");
+        setTimeout(()=>{
+            for (let index = 0; index < 1000000; index++) {
+               // 
+              //   
+            }
+            console.log("After for loop..");
+        },7000)
+        if(val%2==0){
+            resolve("EVEN");
+        }else{
+            reject("ODD");
+        }
+
+    })
+    console.log("Where it goes..");
+}
+
+function uploadFile(file,url){
+    return new Promise(function(resolve,reject){
+        console.log("Starting to upload");
+        setTimeout(()=>{
+            console.log("File upload sucess",file,url,"file");
+            resolve("SUCCESS");
+
+        },10000);
+        console.log("Somewhere in between..");
+    })
+}
+uploadFile("dataFile","www.google.com");
+
+
