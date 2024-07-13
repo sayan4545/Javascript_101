@@ -176,25 +176,62 @@
     THIS IS HOW A PROMISE IS CREATED.
 */
 
-function fetchUserName(url){
-    return new Promise(function f(resolve,reject){
-        console.log("Starting to fetch");
-        setTimeout(function process(){
-            console.log("Fetch started");
-            uname = "sayan1234";
-           
-            console.log("Completed fetching");
-            resolve(uname);
-        },5000);
-        console.log("Taking some time to fetch, Please wait!!");
-    })
+// function fetchUserName(url){
+//     return new Promise(function f(resolve,reject){
+//         console.log("Starting to fetch");
+//         setTimeout(function process(){
+//             console.log("Fetch started");
+//             uname = "sayan1234";
+//             console.log("Completed fetching");
+//             resolve(uname);
+//         },5000);
+//         console.log("Taking some time to fetch, Please wait!!");
+//     })
 
+// }
+// console.log("Starting the program");
+// console.log("Mimicking a fetching program");
+// let x = fetchUserName("www.facebook.com");
+// console.log("Fetching , taking some time to complete");
+// console.log(x);
+
+
+function fetchData(url){
+    return new Promise(function(resolve,reject){
+        console.log("started downloading from url",url);
+        setTimeout(function processDownloading(){
+            let data = "DUMMY DATA";
+            console.log("Completed download");
+            resolve(data);
+        },5000)
+    })
 }
-console.log("Starting the program");
-console.log("Mimicking a fetching program");
-let x = fetchUserName("www.facebook.com");
-console.log("Fetching , taking some time to complete");
-console.log(x);
+
+function writeFile(data){
+    return new Promise(function(resolve,reject){
+        console.log("Started writing",data," in a file");
+        setTimeout(function processWriting(){
+            let filename = "result.txt";
+            console.log("File written succesfully");
+            resolve(filename);
+        },3000)
+    })
+}
+
+function uploadData(file,url){
+    return new Promise(function(resolve,reject){
+        console.log("Starting upload on irl: ",url,"filename is : ",file);
+        setTimeout(function processUploading(){
+            let result = "SUCCESS";
+            console.log("Succesfully uploaded");
+            resolve(result);
+        },5000)
+    })
+}
+
+fetchData("www.google.com");
+writeFile("result.txt");
+uploadData("result.txt","www.xxx.com");
 
 
 
