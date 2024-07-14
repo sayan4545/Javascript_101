@@ -228,10 +228,48 @@ function uploadData(file,url){
         },5000)
     })
 }
+// let data = fetchData("www.google.com");
+// let filename = writeFile(data);
+// let response = uploadData(filename,"www.datadrive.com");
+let downloadPromise = fetchData("www.google.com");
+downloadPromise.then(function processDownloader(value){
+    console.log("Download promise fulfilled");
+    //console.log(value);
+    let writePromise = writeFile(value);
+    writePromise.then(function processWritingFile(value){
+        console.log("Writing of file completed");
+        //console.log(value);
+        let uploadPromise = uploadData(value,"www.data.com");
+        uploadPromise.then(function processUpload(value){
+            console.log("Uploading file completed");
+            console.log(value);
+        })
+    })
+})
+// fetchData("www.google.com");
+// writeFile("result.txt");
+// uploadData("result.txt","www.xxx.com");
+/*
+    The promise consumption is the main thing. Using this we will avoid IOC. Whenever we call a function 
+    returning a promise, We will get a promise object that is like any js object that we can store in a variable.
+    Now , will JS wait here?(line no 231)
+    If there is any async piece of code,will js wait here?
+    If creation of promise involves synchronous piece of code, it will wait, otherwise not.
 
-fetchData("www.google.com");
-writeFile("result.txt");
-uploadData("result.txt","www.xxx.com");
+    The call back have  a long synchronous piece of code, so jS will have to wait for promise object creation
+    And just after the loop, we also resolve the processs so we get a resolved promise.Promise object will get created e
+    easily as there is no blocking piece of code. but initially it will be pending as the fulfillment happensafter a 
+    timer of 7 seconds.
+    Now technically when the promises gets resolved we have to execute some functions.
 
+    from 231 to 233
+
+    We can use .then() on the promise object , to bind the function we want to execute once we fulfill a promise. The 
+    .then() takes function as an argument that we want to execute after promise fulfills and the argument function takes value
+    property as parameter.
+
+
+
+*/
 
 
