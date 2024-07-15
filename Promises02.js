@@ -231,21 +231,21 @@ function uploadData(file,url){
 // let data = fetchData("www.google.com");
 // let filename = writeFile(data);
 // let response = uploadData(filename,"www.datadrive.com");
-let downloadPromise = fetchData("www.google.com");
-downloadPromise.then(function processDownloader(value){
-    console.log("Download promise fulfilled");
-    //console.log(value);
-    let writePromise = writeFile(value);
-    writePromise.then(function processWritingFile(value){
-        console.log("Writing of file completed");
-        //console.log(value);
-        let uploadPromise = uploadData(value,"www.data.com");
-        uploadPromise.then(function processUpload(value){
-            console.log("Uploading file completed");
-            console.log(value);
-        })
-    })
-})
+// let downloadPromise = fetchData("www.google.com");
+// downloadPromise.then(function processDownloader(value){
+//     console.log("Download promise fulfilled");
+//     //console.log(value);
+//     let writePromise = writeFile(value);
+//     writePromise.then(function processWritingFile(value){
+//         console.log("Writing of file completed");
+//         //console.log(value);
+//         let uploadPromise = uploadData(value,"www.data.com");
+//         uploadPromise.then(function processUpload(value){
+//             console.log("Uploading file completed");
+//             console.log(value);
+//         })
+//     })
+// })
 // fetchData("www.google.com");
 // writeFile("result.txt");
 // uploadData("result.txt","www.xxx.com");
@@ -267,9 +267,26 @@ downloadPromise.then(function processDownloader(value){
     We can use .then() on the promise object , to bind the function we want to execute once we fulfill a promise. The 
     .then() takes function as an argument that we want to execute after promise fulfills and the argument function takes value
     property as parameter.
+    .then() is for fulfillment only.
 
 
 
+*/
+
+let downloadpromise = fetchData("www.google.com");
+downloadpromise
+.then(function processDownload(value){
+    console.log("Downloading is done with the following value",value);
+    return "Sayan";
+})
+
+/*
+    If you do download promise = fetchData()
+    and downloadPromise.then(function f(){
+    console.log(value)});
+    return "Sayan"
+
+    The .then() returns a new promise. 
 */
 
 
