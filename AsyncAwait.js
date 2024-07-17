@@ -142,6 +142,10 @@
              It allows the use of await keyword.
              If you declare a function async , it allows consumption of promise using await.
              an async function always converts your return value to a promise.
+
+        An async function is a function declared with the async keyword and the await keyword is permitted within it only.
+        The async and await keyword enable asynchronous promise based behaviour to be written in a cleaner style, avoiding the need of 
+        explicitly configuration of promise chains.
 */
 
 function fetchData(url){
@@ -155,39 +159,72 @@ function fetchData(url){
     })
 }
 
-function writeFile(data){
-    return new Promise(function(resolve,reject){
-        console.log("Started writing",data," in a file");
-        setTimeout(function processWriting(){
-            let filename = "result.txt";
-            console.log("File written succesfully");
-            resolve(filename);
-        },3000)
-    })
+// function writeFile(data){
+//     return new Promise(function(resolve,reject){
+//         console.log("Started writing",data," in a file");
+//         setTimeout(function processWriting(){
+//             let filename = "result.txt";
+//             console.log("File written succesfully");
+//             resolve(filename);
+//         },3000)
+//     })
+// }
+
+// function uploadData(file,url){
+//     return new Promise(function(resolve,reject){
+//         console.log("Starting upload on irl: ",url,"filename is : ",file);
+//         setTimeout(function processUploading(){
+//             let result = "SUCCESS";
+//             console.log("Succesfully uploaded");
+//             resolve(result);
+//         },5000)
+//     })
+// }
+// async function processing(){
+//     let downloadeddata = await fetchData("www.ggogle.com");
+//     console.log("Downloading completed: ",downloadeddata);
+//     let writtendata = await writeFile(downloadeddata);
+//     console.log("Writing completed: ",writtendata);
+//     let uploadeddata = await uploadData(writtendata,"www.dada.com");
+//     console.log("Completed process with response: ",uploadData);
+//     return true;
+
+
+// }
+// console.log("Start");
+// processing();
+// console.log("End");
+
+/*
+
+*/
+
+async function processing2(){
+    console.log("Enterring processing");
+    let value1 = await fetchData("www.google.com");
+    console.log("Google downloading done");
+    let value2 = await fetchData("www.youtube.com");
+    console.log("Youtube downloading done");
+    return value1 + value2;
 }
 
-function uploadData(file,url){
-    return new Promise(function(resolve,reject){
-        console.log("Starting upload on irl: ",url,"filename is : ",file);
-        setTimeout(function processUploading(){
-            let result = "SUCCESS";
-            console.log("Succesfully uploaded");
-            resolve(result);
-        },5000)
-    })
-}
-async function processing(){
-    let downloadeddata = await fetchData("www.ggogle.com");
-    console.log("Downloading completed: ",downloadeddata);
-    let writtendata = await writeFile(downloadeddata);
-    console.log("Writing completed: ",writtendata);
-    let uploadeddata = await uploadData(writtendata,"www.dada.com");
-    console.log("Completed process with response: ",uploadData);
-    return true;
+setTimeout(function timer1(){
+    console.log("timer 1");
+},0);
+console.log("After setting timer 1");
+let x = processing2();
+x.then(function(value){
+    console.log("Finally processing promise resolve with", value);
+})
+setTimeout(function timer2(){
+    console.log("Timer 2");
+},1000);
+setTimeout(function timr3(){
+    console.log("Timer 3");
+},0);
 
 
-}
-processing();
+
 
 
 
